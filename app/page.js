@@ -18,14 +18,12 @@ import HeroCarousel from "@/components/HeroCarousel";
 import ServicesTabs from "@/components/ServicesTabs";
 import StatsBand from "@/components/StatsBand";
 
-// Fotos usadas como fondo de las tarjetas de servicio en la sección "What we
-// do" (pestañas) — fotos reales de public/hero/, distintas a las del
-// carrusel del hero y a las del grid de especialidades de más abajo, para
-// que ninguna imagen se repita dentro de la misma pantalla.
+// Fotos de fondo de las tarjetas de servicio en la sección "What we do"
+// (pestañas) — trabajos reales de public/work/.
 const SERVICE_PHOTOS = {
-  interior: "/hero/service-interior-painting-2.jpg",
-  exterior: "/hero/service-exterior-painting-1.jpg",
-  reparacion: "/hero/service-home-repairs-2.jpg",
+  interior: "/work/bathroom-after.jpg",
+  exterior: "/work/board-batten-front-after.jpg",
+  reparacion: "/work/block-wall-after.jpg",
 };
 
 export default async function HomePage() {
@@ -181,9 +179,8 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* Before / After — comparador arrastrable, la sección visualmente más
-          fuerte del sitio. Las fotos son ilustrativas (generadas con IA), por
-          eso el texto lo dice; los trabajos reales van en /portfolio. */}
+      {/* Before / After — comparador arrastrable con trabajos reales, la
+          sección visualmente más fuerte del sitio. */}
       <section className="mx-auto max-w-6xl px-6 py-24">
         <Reveal>
           <div className="mx-auto mb-3 max-w-xl text-center">
@@ -191,7 +188,7 @@ export default async function HomePage() {
             <h2 className="font-display text-4xl font-bold uppercase text-ink">Drag to compare</h2>
           </div>
           <p className="mx-auto mb-12 max-w-md text-center text-sm text-ink-faint">
-            Illustrative examples of the results we deliver — slide the control on each photo to compare.
+            Real projects by our crew — slide the control on each photo to compare.
           </p>
         </Reveal>
         <BeforeAfterShowcase />
@@ -232,7 +229,7 @@ export default async function HomePage() {
       <ProcessSteps />
 
       <CtaBanner
-        image="/hero/showcase-bedroom-finished.jpg"
+        image="/work/library-after.jpg"
         eyebrow="Quality that shows"
         title="A finished room should look like nothing ever happened to it."
         text="Every job — big repaint or small repair — gets the same protected floors, taped edges, and clean finish before we call it done."

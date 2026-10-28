@@ -54,8 +54,8 @@ export default function WhyChooseUs({ config }) {
                 borde y ya. */}
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/hero/showcase-kitchen-finished-sm.jpg"
-              alt="Finished kitchen repaint with clean white cabinetry"
+              src="/work/front-exterior-after.jpg"
+              alt="Craftsman home exterior repainted in sage green with white trim"
               loading="lazy"
               decoding="async"
               className="relative w-full object-cover shadow-premium"

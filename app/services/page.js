@@ -6,12 +6,12 @@ import { getConfig, listServices } from "@/lib/db";
 
 const ICONS = { interior: IconBrush, exterior: IconHouse, reparacion: IconWrench };
 
-// Mismas fotos que la sección "What we do" del home y el carrusel del hero
-// (public/hero/) — mantiene consistencia visual entre páginas.
+// Trabajos reales de public/work/, distintos a los de las pestañas del
+// inicio para que las dos páginas no repitan la misma foto por servicio.
 const SERVICE_PHOTOS = {
-  interior: "/hero/service-interior-painting-1.jpg",
-  exterior: "/hero/service-exterior-painting-1.jpg",
-  reparacion: "/hero/service-home-repairs-1.jpg",
+  interior: "/work/library-after.jpg",
+  exterior: "/work/ranch-siding-after.jpg",
+  reparacion: "/work/stucco-exterior-after.jpg",
 };
 
 export const metadata = {

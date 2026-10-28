@@ -2,40 +2,32 @@
 
 import { useEffect, useRef, useState } from "react";
 
-// Slides reales del hero — fotos de public/hero/, ya optimizadas a JPG
-// (originales PNG de 2-2.7MB comprimidas a ~150-370KB, con una variante
-// "-sm" de 900px de ancho para pantallas chicas vía srcset). Cada slide
-// tiene su propia etiqueta de servicio: no es solo una foto de fondo, es
-// una pequeña señal editorial ("Exterior Painting", etc.) que ancla la
-// imagen a lo que Michael realmente hace, sin depender del headline fijo
-// de arriba (ese viene de la configuración y no cambia con el slide).
+// Slides del hero — fotos de trabajos reales de Maykar (public/work/),
+// optimizadas a JPG con una variante "-sm" de 900px para pantallas chicas
+// vía srcset. La primera es la que mejor puntuó en nitidez, exposición y
+// contraste en la zona que realmente queda a la vista junto al panel azul.
+// Cada slide tiene su propia etiqueta de servicio, independiente del
+// headline fijo de arriba (ese viene de la configuración).
 const SLIDES = [
   {
     id: "exterior-painting",
-    base: "/hero/hero-exterior-painting",
+    base: "/work/ranch-siding-after",
     label: "Exterior Painting",
-    alt: "Painting crew finishing porch columns on a two-story home",
-    focal: "object-[50%_35%]",
-  },
-  {
-    id: "exterior-repairs",
-    base: "/hero/hero-exterior-repairs",
-    label: "Home Repairs",
-    alt: "Two-person crew replacing rotted exterior window trim",
-    focal: "object-[55%_40%]",
-  },
-  {
-    id: "interior-painting",
-    base: "/hero/hero-interior-painting",
-    label: "Interior Painting",
-    alt: "Painter rolling a fresh coat on a living room accent wall",
-    focal: "object-[40%_45%]",
+    alt: "Ranch home with vertical siding freshly repainted in charcoal",
+    focal: "object-[50%_55%]",
   },
   {
     id: "finished-result",
-    base: "/hero/showcase-exterior-finished",
+    base: "/work/rear-exterior-after",
     label: "The Finished Result",
-    alt: "Finished front porch with fresh paint and clean landscaping",
+    alt: "Back of a three-story home repainted in sage green with white trim",
+    focal: "object-[50%_45%]",
+  },
+  {
+    id: "interior-painting",
+    base: "/work/bathroom-after",
+    label: "Interior Painting",
+    alt: "Bathroom walls repainted in a deep teal",
     focal: "object-[50%_45%]",
   },
 ];
@@ -76,7 +68,7 @@ export default function HeroCarousel({ className = "" }) {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={`${base}.jpg`}
-            srcSet={`${base}-sm.jpg 900w, ${base}.jpg 1672w`}
+            srcSet={`${base}-sm.jpg 900w, ${base}.jpg 1600w`}
             sizes="100vw"
             alt={alt}
             className={`hero-kenburns h-full w-full object-cover ${focal}`}

@@ -2,25 +2,25 @@ import Reveal from "./Reveal";
 import BeforeAfterSlider from "./BeforeAfterSlider";
 import { IconCheck } from "./Icons";
 
-// Tres comparaciones antes/después con la misma foto y el mismo encuadre en
-// cada par. Son imágenes ilustrativas generadas con IA, no trabajos reales
-// del negocio — por eso cada una se etiqueta "Illustrative example" en vez
-// de mostrar una ciudad, que daría a entender un proyecto real ahí.
+// Tres trabajos reales de Maykar — los pares con el encuadre más parecido
+// entre el antes y el después, para que el comparador se lea bien. Los
+// números de casa y placas están difuminados en las fotos (public/work/).
+// El resto de los trabajos está en /portfolio (se administra desde el panel).
 const PAIRS = [
   {
-    title: "Drywall Patch & Repaint",
-    beforeUrl: "/hero/before-after-wall-repair-before.jpg",
-    afterUrl: "/hero/before-after-wall-repair-after.jpg",
+    title: "Board & Batten Repaint",
+    beforeUrl: "/work/board-batten-side-before.jpg",
+    afterUrl: "/work/board-batten-side-after.jpg",
   },
   {
-    title: "Baseboard & Trim Repair",
-    beforeUrl: "/hero/before-after-trim-repair-before.jpg",
-    afterUrl: "/hero/before-after-trim-repair-after.jpg",
+    title: "Stucco Exterior Repaint",
+    beforeUrl: "/work/stucco-exterior-before.jpg",
+    afterUrl: "/work/stucco-exterior-after.jpg",
   },
   {
-    title: "Exterior Window Trim Repair",
-    beforeUrl: "/hero/before-after-window-repair-before.jpg",
-    afterUrl: "/hero/before-after-window-repair-after.jpg",
+    title: "Wood Paneling Painted White",
+    beforeUrl: "/work/wood-paneling-before.jpg",
+    afterUrl: "/work/wood-paneling-after.jpg",
   },
 ];
 
@@ -48,7 +48,7 @@ export default function BeforeAfterShowcase() {
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {PAIRS.map((p, i) => (
           <Reveal key={p.title} delay={i * 90} className={OFFSET_CLASS[i]}>
-            <BeforeAfterSlider title={p.title} location="Illustrative example" beforeUrl={p.beforeUrl} afterUrl={p.afterUrl} height="h-72" />
+            <BeforeAfterSlider title={p.title} location="Recent project" beforeUrl={p.beforeUrl} afterUrl={p.afterUrl} height="h-72" />
           </Reveal>
         ))}
       </div>
