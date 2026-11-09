@@ -23,7 +23,7 @@ export const fetchCache = "force-no-store";
 // bought and connected. Until then it falls back to the current live
 // deployment URL, so SEO metadata is always accurate instead of pointing at
 // a domain nobody owns yet.
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://maykar-professional-painting-llc.vercel.app";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://maykarpainting.vercel.app";
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
