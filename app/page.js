@@ -90,7 +90,9 @@ export default async function HomePage() {
               {config.heroSubheadline}
             </p>
             <div className="hero-anim flex flex-wrap gap-4" style={{ animationDelay: "560ms" }}>
-              <Link href="/estimate" className="btn-primary">Get a Free Estimate</Link>
+              {smsLink && (
+                <a href={smsLink} className="btn-primary">Get a Free Estimate</a>
+              )}
               {/* "!" porque .btn-outline vive fuera de @layer en globals.css y sus
                   colores oscuros le ganan a las utilidades normales. */}
               <a
@@ -234,41 +236,10 @@ export default async function HomePage() {
         title="A finished room should look like nothing ever happened to it."
         text="Every job — big repaint or small repair — gets the same protected floors, taped edges, and clean finish before we call it done."
         points={["Furniture & floors fully protected", "Daily site clean-up", "Final walkthrough before we leave"]}
+        ctaHref={smsLink}
       />
 
       <WhyChooseUs config={config} />
-
-      {/* AI estimator banner */}
-      <section className="bg-navy-dark py-20">
-        <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 px-6 md:grid-cols-2">
-          <Reveal>
-            <div className="text-white">
-              <div className="mb-3 text-[13px] font-extrabold uppercase tracking-wide text-gold">AI Estimator</div>
-              <h2 className="mb-4 font-display text-4xl font-bold uppercase">A real price, not a guess.</h2>
-              <p className="mb-7 max-w-md text-white/75">
-                Answer three questions and see exactly how your range is calculated — base rate, size, and condition — before leaving your info.
-              </p>
-              <Link href="/estimate" className="btn-primary">See how it's calculated</Link>
-            </div>
-          </Reveal>
-          <Reveal delay={120}>
-            <div className="border border-white/15 bg-white p-6">
-              <div className="mb-3 flex items-center justify-between border-b border-line px-1 pb-3 text-[13px]">
-                <span className="text-ink-soft">Base rate — Interior painting, Medium</span>
-                <span className="font-bold text-ink">$1,200–$1,800</span>
-              </div>
-              <div className="mb-4 flex items-center justify-between px-1 text-[13px]">
-                <span className="text-ink-soft">Condition adjustment (fair)</span>
-                <span className="font-bold text-ink">no change</span>
-              </div>
-              <div className="flex items-center justify-between bg-paper-2 px-5 py-4">
-                <span className="text-sm font-bold text-ink">Estimated range</span>
-                <span className="font-display text-xl font-bold text-gold-dark">$1,200–$1,800</span>
-              </div>
-            </div>
-          </Reveal>
-        </div>
-      </section>
 
       {/* Reviews */}
       <section id="reviews" className="mx-auto max-w-6xl px-6 py-24">

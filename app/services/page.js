@@ -1,8 +1,8 @@
-import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import { IconBrush, IconHouse, IconWrench } from "@/components/Icons";
 import { getConfig, listServices } from "@/lib/db";
+import { buildSmsLink } from "@/lib/sms";
 
 const ICONS = { interior: IconBrush, exterior: IconHouse, reparacion: IconWrench };
 
@@ -21,6 +21,7 @@ export const metadata = {
 
 export default async function ServicesPage() {
   const [config, services] = await Promise.all([getConfig(), listServices()]);
+  const smsLink = buildSmsLink(config.smsPhone);
 
   return (
     <>
@@ -80,7 +81,7 @@ export default async function ServicesPage() {
 
         <div className="mt-14 flex flex-col items-center gap-5 bg-navy-dark px-8 py-12 text-center">
           <h3 className="font-display text-2xl font-bold uppercase text-white">Which one do you need?</h3>
-          <Link href="/estimate" className="btn-primary">Get My Price</Link>
+          {smsLink && <a href={smsLink} className="btn-primary">Get a Free Estimate</a>}
         </div>
       </section>
       <SiteFooter />

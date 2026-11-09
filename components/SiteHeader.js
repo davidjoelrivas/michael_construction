@@ -41,7 +41,6 @@ export default function SiteHeader({ config, overHero = false }) {
   const links = [
     { href: "/services", label: "Services" },
     { href: "/portfolio", label: "Portfolio" },
-    { href: "/estimate", label: "AI Estimate" },
     { href: "/reviews", label: "Reviews" },
     { href: "/contact", label: "Contact" },
   ];
@@ -105,9 +104,11 @@ export default function SiteHeader({ config, overHero = false }) {
               </span>
               {config.phone}
             </a>
-            <Link href="/estimate" className="btn-primary !hidden text-xs sm:!inline-flex">
-              Get a Quote
-            </Link>
+            {smsLink && (
+              <a href={smsLink} className="btn-primary !hidden text-xs sm:!inline-flex">
+                Free Estimate
+              </a>
+            )}
             <button
               onClick={() => setMenuOpen((v) => !v)}
               aria-label="Toggle menu"

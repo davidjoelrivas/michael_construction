@@ -1,6 +1,6 @@
 export default function sitemap() {
-  const base = process.env.NEXT_PUBLIC_SITE_URL || "https://michael-construction.vercel.app";
-  const routes = ["", "/services", "/portfolio", "/estimate", "/reviews", "/contact", "/privacy"];
+  const base = process.env.NEXT_PUBLIC_SITE_URL || "https://maykar-professional-painting-llc.vercel.app";
+  const routes = ["", "/services", "/portfolio", "/reviews", "/contact", "/privacy"];
   return routes.map((route) => ({
     url: `${base}${route}`,
     lastModified: new Date(),

@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Reveal from "./Reveal";
 import { IconCheck } from "./Icons";
 
@@ -9,7 +8,7 @@ import { IconCheck } from "./Icons";
 // parejo con degradado detrás de todo. object-position fija en el
 // centro-alto de la habitación para que el recorte nunca corte la
 // cama/ventana en móvil.
-export default function CtaBanner({ image, eyebrow, title, text, ctaHref = "/estimate", ctaLabel = "Get a Free Estimate", points = [] }) {
+export default function CtaBanner({ image, eyebrow, title, text, ctaHref, ctaLabel = "Get a Free Estimate", points = [] }) {
   return (
     <section className="relative isolate overflow-hidden bg-navy-dark py-28 sm:py-36">
       <div className="absolute inset-y-0 right-0 w-full lg:w-[58%] lg:[clip-path:polygon(14%_0,100%_0,100%_100%,0_100%)]">
@@ -48,7 +47,7 @@ export default function CtaBanner({ image, eyebrow, title, text, ctaHref = "/est
               ))}
             </ul>
           )}
-          <Link href={ctaHref} className="btn-primary">{ctaLabel}</Link>
+          {ctaHref && <a href={ctaHref} className="btn-primary">{ctaLabel}</a>}
         </Reveal>
       </div>
     </section>

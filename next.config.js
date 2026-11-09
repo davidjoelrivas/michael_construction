@@ -23,7 +23,8 @@ const nextConfig = {
       { source: "/portafolio", destination: "/portfolio", permanent: true },
       { source: "/resenas", destination: "/reviews", permanent: true },
       { source: "/contacto", destination: "/contact", permanent: true },
-      { source: "/estimado", destination: "/estimate", permanent: true },
+      { source: "/estimado", destination: "/contact", permanent: true },
+      { source: "/estimate", destination: "/contact", permanent: true },
     ];
   },
 };

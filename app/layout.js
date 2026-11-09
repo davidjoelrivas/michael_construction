@@ -23,7 +23,7 @@ export const fetchCache = "force-no-store";
 // bought and connected. Until then it falls back to the current live
 // deployment URL, so SEO metadata is always accurate instead of pointing at
 // a domain nobody owns yet.
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://michael-construction.vercel.app";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://maykar-professional-painting-llc.vercel.app";
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
@@ -32,7 +32,7 @@ export const metadata = {
     template: "%s | Maykar Professional Painting",
   },
   description:
-    "Interior and exterior painting, plus home repairs. Clear, transparent pricing — get a free estimate in minutes.",
+    "Interior and exterior painting, plus home repairs. Clear, transparent pricing — text us for a free estimate.",
   openGraph: {
     type: "website",
     siteName: "Maykar Professional Painting",

@@ -31,7 +31,6 @@ export default async function SiteFooter() {
             <li><Link href="/services" className="transition hover:text-white">Interior painting</Link></li>
             <li><Link href="/services" className="transition hover:text-white">Exterior painting</Link></li>
             <li><Link href="/services" className="transition hover:text-white">Home repairs</Link></li>
-            <li><Link href="/estimate" className="transition hover:text-white">AI estimate</Link></li>
           </ul>
         </div>
         <div>

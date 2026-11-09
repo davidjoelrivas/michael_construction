@@ -15,7 +15,7 @@ function buildPoints(config) {
     },
     {
       title: "Pricing you can see through",
-      text: "Every estimate shows the math behind it — base rate, condition adjustment, any add-ons. You'll never wonder where a number came from.",
+      text: "You get a clear price before any work starts, so you'll never wonder where a number came from.",
     },
     {
       title: "Clean, respectful work",
